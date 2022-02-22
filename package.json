@@ -14,7 +14,7 @@
     "quickstart": "node .github/scripts/quickstart/index.mjs",
     "preview": "node .github/scripts/preview.mjs",
     "linter": "eslint source/**/*.mjs --quiet",
-    "format": "eslint source/**/*.mjs --fix",
+    "format": "node .github/scripts/format.mjs",
     "dev": "nodemon source/app/web/index.mjs -e mjs,css,ejs,json",
     "postinstall": "node node_modules/puppeteer/install.js",
     "indepth": "node source/plugins/languages/analyzers.mjs"
@@ -68,7 +68,13 @@
     "xml-formatter": "^2.6.0"
   },
   "devDependencies": {
+    "@dprint/dockerfile": "^0.2.2",
+    "@dprint/formatter": "^0.2.0",
+    "@dprint/json": "^0.14.1",
+    "@dprint/markdown": "^0.12.2",
+    "@dprint/typescript": "^0.64.0",
     "eslint": "^8.9.0",
+    "glob": "^7.2.0",
     "jest": "^27.5.0",
     "libxmljs2": "^0.29.0",
     "nodemon": "^2.0.15"
